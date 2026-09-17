@@ -3,234 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BestBuy Spain — сравнение товаров и предложений магазинов.">
+<meta name="description" content="BestBuy Spain — compara productos y ofertas de tiendas en España.">
 <title>BestBuy Spain</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#172033}
-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #e5e7eb}
-.wrap{max-width:1100px;margin:auto;padding:0 16px}
-.top{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{font-size:23px;font-weight:800;color:#1769e0;text-decoration:none}
-nav{display:flex;gap:18px}
-nav a{color:#273244;text-decoration:none;font-size:14px;font-weight:600}
-.langs{display:flex;gap:5px;flex-wrap:wrap}
-.lang{border:1px solid #d8dee9;background:#fff;border-radius:8px;padding:7px 8px;cursor:pointer;font-size:12px}
-.lang.active{background:#1769e0;color:#fff;border-color:#1769e0}
-.hero{padding:34px 0 24px;background:linear-gradient(135deg,#eef5ff,#fff)}
-h1{font-size:34px;margin:0 0 10px}
-.subtitle{margin:0 0 20px;color:#596579;line-height:1.5}
-.search{width:100%;padding:14px 16px;border:1px solid #ccd4e0;border-radius:12px;font-size:16px;outline:none}
-.search:focus{border-color:#1769e0}
-section{padding:26px 0}
-.section-title{font-size:24px;margin:0 0 16px}
-.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.cat{background:#fff;border:1px solid #e3e7ee;border-radius:14px;padding:18px;font-weight:700;text-align:center;cursor:pointer}
-.cat:hover{border-color:#1769e0}
-.product{background:#fff;border:1px solid #e0e5ed;border-radius:18px;padding:20px;box-shadow:0 4px 18px rgba(20,40,80,.05)}
-.product-head{display:flex;gap:22px;align-items:flex-start}
-.phone{width:190px;min-width:190px;height:250px;border-radius:24px;background:#eef2f7;display:flex;align-items:center;justify-content:center;font-size:70px}
-.product h2{margin:0 0 8px;font-size:25px}
-.rating{color:#e39a00;font-weight:700;margin-bottom:12px}
-.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:16px 0}
-.spec{background:#f7f9fc;border-radius:10px;padding:10px;font-size:14px}
-.offers{margin-top:22px;border-top:1px solid #e6eaf0;padding-top:18px}
-.offer{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid #e2e6ed;border-radius:12px;padding:13px 14px;margin:9px 0}
-.seller{font-weight:800}
-.price{font-size:18px;font-weight:800;white-space:nowrap}
-.buy{display:inline-block;background:#1769e0;color:#fff;text-decoration:none;padding:10px 15px;border-radius:9px;font-weight:700;white-space:nowrap}
-.buy:hover{background:#0e55bc}
-.note{font-size:12px;color:#697386;margin-top:14px;line-height:1.5}
-footer{background:#172033;color:#dbe2ef;margin-top:25px;padding:25px 0;font-size:13px}
-@media(max-width:760px){
-nav{display:none}h1{font-size:28px}.categories{grid-template-columns:repeat(2,1fr)}
-.product-head{flex-direction:column}.phone{width:100%;height:180px;min-width:0}.specs{grid-template-columns:1fr}
-.offer{align-items:flex-start;flex-wrap:wrap}.price{margin-left:auto}.langs{max-width:210px;justify-content:flex-end}
-}
-@media(max-width:420px){.lang{padding:6px 7px;font-size:11px}.top{align-items:flex-start;padding-top:10px;padding-bottom:10px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#172033}
+a{text-decoration:none;color:inherit}button,input{font:inherit}.wrap{max-width:1150px;margin:auto;padding:0 16px}
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e5e7eb}.top{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-size:23px;font-weight:800;color:#1769e0}
+nav{display:flex;gap:18px}nav a{font-size:14px;font-weight:600;color:#273244}
+.langs{display:flex;gap:5px;flex-wrap:wrap}.lang{border:1px solid #d8dee9;background:#fff;border-radius:8px;padding:7px 8px;cursor:pointer;font-size:12px}.lang.active{background:#1769e0;color:#fff;border-color:#1769e0}
+.hero{padding:48px 0 32px;background:linear-gradient(135deg,#eef5ff,#fff)}.hero h1{font-size:42px;margin:0 0 10px}.hero p{font-size:18px;color:#596579;margin:0 0 24px}
+.search-box{position:relative;max-width:760px}.search-box input{width:100%;padding:17px 105px 17px 18px;border:1px solid #cfd7e3;border-radius:12px;background:#fff;outline:none;box-shadow:0 4px 15px rgba(20,40,80,.06)}.search-box input:focus{border-color:#1769e0}.clear{position:absolute;right:8px;top:8px;border:0;background:#eef2f7;border-radius:8px;padding:9px 12px;cursor:pointer;display:none}.hint{font-size:13px;color:#738096;margin-top:9px}
+section{padding:30px 0}.section-title{font-size:27px;margin:0 0 18px}.filters{display:flex;gap:9px;flex-wrap:wrap}.filter{border:1px solid #d8dee9;background:#fff;padding:10px 14px;border-radius:10px;cursor:pointer}.filter.active{background:#172033;color:#fff;border-color:#172033}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid #e4e8ef;border-radius:15px;padding:17px;box-shadow:0 5px 18px rgba(20,40,80,.05);transition:.15s}.card:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(20,40,80,.09)}
+.card-media{height:105px;border-radius:11px;background:#f0f4fa;display:flex;align-items:center;justify-content:center;font-size:56px;margin-bottom:13px}.badge{display:inline-block;font-size:11px;background:#edf3ff;color:#1769e0;padding:5px 8px;border-radius:20px;margin-bottom:8px}.card h3{font-size:18px;margin:4px 0 8px}.card p{color:#667085;font-size:14px;line-height:1.45;min-height:60px;margin:0 0 10px}.spec-mini{font-size:12px;color:#475467;line-height:1.5;min-height:38px}.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}.price{font-weight:800;font-size:17px}.buy,.details-btn{display:inline-block;border:0;border-radius:9px;padding:10px 12px;background:#1769e0;color:#fff;font-size:13px;font-weight:700;cursor:pointer}.details-btn{background:#eef3ff;color:#1769e0;width:100%;text-align:center;margin-top:10px}
+.no-results{text-align:center;padding:40px 10px;display:none}.disclosure{font-size:12px;color:#7b8494;line-height:1.5;margin-top:24px}
+.hidden{display:none!important}
+.detail{display:none;padding:34px 0 50px}.detail.show{display:block}.back{display:inline-block;margin-bottom:18px;color:#1769e0;font-weight:700}.detail-card{background:#fff;border:1px solid #e4e8ef;border-radius:18px;padding:25px}.detail-top{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start}.detail-icon{height:220px;border-radius:16px;background:#f0f4fa;display:flex;align-items:center;justify-content:center;font-size:100px}.detail h1{font-size:32px;margin:0 0 10px}.detail-desc{color:#667085;font-size:16px;line-height:1.55}.detail-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0}.spec{border:1px solid #e4e8ef;border-radius:10px;padding:12px}.spec b{display:block;font-size:12px;color:#7b8494;margin-bottom:4px}.offers{margin-top:22px}.offers h2{font-size:21px}.offer{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #e8ebf0;padding:14px 0}.offer:first-child{border-top:0}.offer-store{font-weight:700}.offer-price{font-weight:800}
+footer{padding:28px 0;background:#172033;color:#dce3ee;font-size:13px}
+@media(max-width:850px){.product-grid{grid-template-columns:repeat(2,1fr)}nav{display:none}.hero h1{font-size:34px}.detail-top{grid-template-columns:1fr}.detail-icon{height:170px}.detail-specs{grid-template-columns:1fr}}
+@media(max-width:560px){.product-grid{grid-template-columns:1fr}.top{align-items:flex-start;padding:10px 0}.langs{justify-content:flex-end}.hero{padding-top:30px}.hero h1{font-size:30px}.detail h1{font-size:26px}}
 </style>
 </head>
 <body>
-
-<header>
-<div class="wrap top">
-<a class="logo" href="#home">BestBuy Spain</a>
-<nav>
-<a href="#home" data-i18n="navHome">Inicio</a>
-<a href="#categories" data-i18n="navCategories">Categorías</a>
-<a href="#products" data-i18n="navProducts">Productos</a>
-</nav>
+<header><div class="wrap top">
+<a class="logo" href="#" onclick="showHome();return false">BestBuy Spain</a>
+<nav><a href="#home" data-i18n="navHome">Inicio</a><a href="#categories" data-i18n="navCategories">Categorías</a><a href="#products" data-i18n="navProducts">Productos</a></nav>
 <div class="langs">
-<button class="lang active" data-lang="es">🇪🇸 ES</button>
-<button class="lang" data-lang="ru">🇷🇺 RU</button>
-<button class="lang" data-lang="en">🇬🇧 EN</button>
-<button class="lang" data-lang="zh">🇨🇳 中文</button>
-<button class="lang" data-lang="de">🇩🇪 DE</button>
+<button class="lang active" data-lang="es">🇪🇸</button><button class="lang" data-lang="ru">🇷🇺</button><button class="lang" data-lang="en">🇬🇧</button><button class="lang" data-lang="zh">🇨🇳</button><button class="lang" data-lang="de">🇩🇪</button>
 </div>
-</div>
-</header>
+</div></header>
 
 <main id="home">
-<div class="hero">
-<div class="wrap">
+<section class="hero"><div class="wrap">
 <h1 data-i18n="heroTitle">Compara. Elige. Compra.</h1>
-<p class="subtitle" data-i18n="heroSubtitle">Encuentra productos y compara ofertas de diferentes tiendas.</p>
-<input id="search" class="search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Buscar productos, por ejemplo Samsung A56...">
-</div>
-</div>
+<p data-i18n="heroSubtitle">Encuentra productos y compara ofertas de diferentes tiendas.</p>
+<div class="search-box"><input id="search" data-i18n-placeholder="searchPlaceholder" placeholder="Buscar productos, por ejemplo Samsung A56..."><button id="clearSearch" class="clear">✕</button></div>
+<div class="hint"><span data-i18n="searchHint">Escribe el nombre del producto o elige una categoría.</span> · <span id="resultCount"></span></div>
+</div></section>
 
-<section id="categories">
-<div class="wrap">
+<section id="categories"><div class="wrap">
 <h2 class="section-title" data-i18n="categoriesTitle">Categorías</h2>
-<div class="categories">
-<div class="cat" data-i18n="catPhones">📱 Smartphones</div>
-<div class="cat" data-i18n="catLaptops">💻 Portátiles</div>
-<div class="cat" data-i18n="catTV">📺 Televisores</div>
-<div class="cat" data-i18n="catHome">🏠 Electrodomésticos</div>
-</div>
-</div>
-</section>
+<div class="filters">
+<button class="filter active" data-category="all" data-i18n="all">Todos</button>
+<button class="filter" data-category="phone" data-i18n="catPhones">📱 Smartphones</button>
+<button class="filter" data-category="computer" data-i18n="catComputers">💻 Ordenadores</button>
+<button class="filter" data-category="tv" data-i18n="catTV">📺 Televisores</button>
+<button class="filter" data-category="gaming" data-i18n="catGaming">🎮 Gaming</button>
+<button class="filter" data-category="home" data-i18n="catHome">🏠 Hogar</button>
+</div></div></section>
 
-<section id="products">
-<div class="wrap">
-<h2 class="section-title" data-i18n="featuredTitle">Producto destacado</h2>
-
-<article class="product" id="a56">
-<div class="product-head">
-<div class="phone">📱</div>
-<div style="flex:1">
-<h2>Samsung Galaxy A56 5G 8GB/128GB</h2>
-<div class="rating">★ 4.7/5</div>
-<p data-i18n="productIntro">Smartphone 5G moderno con pantalla AMOLED, 8 GB de RAM y batería de 5000 mAh.</p>
-
-<div class="specs">
-<div class="spec"><b data-i18n="screen">Pantalla:</b> 6.7" Super AMOLED</div>
-<div class="spec"><b data-i18n="ram">RAM:</b> 8 GB</div>
-<div class="spec"><b data-i18n="storage">Almacenamiento:</b> 128 GB</div>
-<div class="spec"><b data-i18n="camera">Cámara:</b> 50 + 12 + 5 MP</div>
-<div class="spec"><b data-i18n="battery">Batería:</b> 5000 mAh</div>
-<div class="spec"><b data-i18n="protection">Protección:</b> IP67</div>
-</div>
-</div>
-</div>
-
-<div class="offers">
-<h3 data-i18n="offersTitle">Ofertas de vendedores</h3>
-
-<div class="offer">
-<div><div class="seller">PcComponentes</div><small data-i18n="sellerCheck">Oferta de la tienda</small></div>
-<div class="price">311,81 €</div>
-<a class="buy" href="https://www.pccomponentes.com/samsung-galaxy-a56-5g-8gb-128gb-6-7-gris" target="_blank" rel="nofollow sponsored noopener" data-i18n="buy">Comprar</a>
-</div>
-
-<div class="offer">
-<div><div class="seller">MediaMarkt</div><small data-i18n="sellerCheck">Oferta de la tienda</small></div>
-<div class="price">328,97 €</div>
-<a class="buy" href="https://www.mediamarkt.es/es/product/_samsung-galaxy-a56-graphite-movil-android-128-gb-8-gb-ram-67-lcd-octa-core-processor-5000-mah-157324125.html" target="_blank" rel="nofollow sponsored noopener" data-i18n="buy">Comprar</a>
-</div>
-
-<div class="offer">
-<div><div class="seller">Amazon.es</div><small data-i18n="sellerCheck">Oferta de la tienda</small></div>
-<div class="price" data-i18n="check">Comprobar</div>
-<a class="buy" href="https://www.amazon.es/s?k=Samsung+Galaxy+A56+5G+8GB+128GB" target="_blank" rel="nofollow sponsored noopener" data-i18n="buy">Comprar</a>
-</div>
-
-<p class="note" data-i18n="notice">Los precios y la disponibilidad pueden cambiar. Los enlaces de afiliado todavía no están conectados; después de registrarte en los programas de afiliación se pueden sustituir por enlaces con tu ID.</p>
-</div>
-</article>
-</div>
-</section>
+<section id="products"><div class="wrap">
+<h2 class="section-title" data-i18n="productsTitle">Productos</h2>
+<div id="productGrid" class="product-grid"></div>
+<div id="noResults" class="no-results"><div style="font-size:40px">🔎</div><h3 data-i18n="noResultsTitle">No se encontraron productos</h3><p data-i18n="noResultsText">Prueba otro nombre o selecciona otra categoría.</p></div>
+<p class="disclosure" data-i18n="notice">*Los precios son orientativos y pueden cambiar. Los enlaces todavía no son de afiliado.</p>
+</div></section>
 </main>
+
+<section id="detail" class="detail"><div class="wrap">
+<a class="back" href="#" onclick="showHome();return false">← <span data-i18n="back">Volver a productos</span></a>
+<div id="detailContent"></div>
+</div></section>
 
 <footer><div class="wrap"><div data-i18n="footerText">BestBuy Spain — comparación de productos y ofertas de tiendas.</div></div></footer>
 
 <script>
-const translations={
-es:{
-navHome:"Inicio",navCategories:"Categorías",navProducts:"Productos",
-heroTitle:"Compara. Elige. Compra.",heroSubtitle:"Encuentra productos y compara ofertas de diferentes tiendas.",
-searchPlaceholder:"Buscar productos, por ejemplo Samsung A56...",categoriesTitle:"Categorías",
-catPhones:"📱 Smartphones",catLaptops:"💻 Portátiles",catTV:"📺 Televisores",catHome:"🏠 Electrodomésticos",
-featuredTitle:"Producto destacado",productIntro:"Smartphone 5G moderno con pantalla AMOLED, 8 GB de RAM y batería de 5000 mAh.",
-screen:"Pantalla:",ram:"RAM:",storage:"Almacenamiento:",camera:"Cámara:",battery:"Batería:",protection:"Protección:",
-offersTitle:"Ofertas de vendedores",sellerCheck:"Oferta de la tienda",buy:"Comprar",check:"Comprobar",
-notice:"Los precios y la disponibilidad pueden cambiar. Los enlaces de afiliado todavía no están conectados; después de registrarte en los programas de afiliación se pueden sustituir por enlaces con tu ID.",
-footerText:"BestBuy Spain — comparación de productos y ofertas de tiendas."
-},
-ru:{
-navHome:"Главная",navCategories:"Категории",navProducts:"Товары",
-heroTitle:"Сравнивай. Выбирай. Покупай.",heroSubtitle:"Находи товары и сравнивай предложения разных магазинов.",
-searchPlaceholder:"Поиск товаров, например Samsung A56...",categoriesTitle:"Категории",
-catPhones:"📱 Смартфоны",catLaptops:"💻 Ноутбуки",catTV:"📺 Телевизоры",catHome:"🏠 Техника для дома",
-featuredTitle:"Рекомендуемый товар",productIntro:"Современный смартфон 5G с AMOLED-дисплеем, 8 ГБ оперативной памяти и аккумулятором 5000 мА·ч.",
-screen:"Экран:",ram:"ОЗУ:",storage:"Память:",camera:"Камера:",battery:"Батарея:",protection:"Защита:",
-offersTitle:"Предложения продавцов",sellerCheck:"Предложение магазина",buy:"Купить",check:"Проверить",
-notice:"Цены и наличие могут меняться. Партнёрские ссылки пока не подключены — после регистрации в партнёрских программах ссылки можно заменить на ссылки с твоим ID.",
-footerText:"BestBuy Spain — сравнение товаров и предложений магазинов."
-},
-en:{
-navHome:"Home",navCategories:"Categories",navProducts:"Products",
-heroTitle:"Compare. Choose. Buy.",heroSubtitle:"Find products and compare offers from different stores.",
-searchPlaceholder:"Search products, for example Samsung A56...",categoriesTitle:"Categories",
-catPhones:"📱 Smartphones",catLaptops:"💻 Laptops",catTV:"📺 TVs",catHome:"🏠 Home appliances",
-featuredTitle:"Featured product",productIntro:"Modern 5G smartphone with an AMOLED display, 8 GB of RAM and a 5000 mAh battery.",
-screen:"Display:",ram:"RAM:",storage:"Storage:",camera:"Camera:",battery:"Battery:",protection:"Protection:",
-offersTitle:"Seller offers",sellerCheck:"Store offer",buy:"Buy",check:"Check",
-notice:"Prices and availability may change. Affiliate links are not connected yet; after joining affiliate programs, the links can be replaced with links containing your ID.",
-footerText:"BestBuy Spain — product and store offer comparison."
-},
-zh:{
-navHome:"首页",navCategories:"分类",navProducts:"商品",
-heroTitle:"比较、选择、购买。",heroSubtitle:"查找商品并比较不同商店的优惠。",
-searchPlaceholder:"搜索商品，例如 Samsung A56...",categoriesTitle:"商品分类",
-catPhones:"📱 智能手机",catLaptops:"💻 笔记本电脑",catTV:"📺 电视",catHome:"🏠 家用电器",
-featuredTitle:"推荐商品",productIntro:"现代 5G 智能手机，配备 AMOLED 屏幕、8GB 内存和 5000mAh 电池。",
-screen:"屏幕：",ram:"运行内存：",storage:"存储：",camera:"相机：",battery:"电池：",protection:"防护：",
-offersTitle:"商家报价",sellerCheck:"商店报价",buy:"购买",check:"查看",
-notice:"价格和库存可能发生变化。目前尚未连接联盟链接；加入联盟计划后，可以将链接替换为带有你的推广 ID 的链接。",
-footerText:"BestBuy Spain — 商品和商店优惠比较。"
-},
-de:{
-navHome:"Startseite",navCategories:"Kategorien",navProducts:"Produkte",
-heroTitle:"Vergleichen. Auswählen. Kaufen.",heroSubtitle:"Finde Produkte und vergleiche Angebote verschiedener Händler.",
-searchPlaceholder:"Produkte suchen, zum Beispiel Samsung A56...",categoriesTitle:"Kategorien",
-catPhones:"📱 Smartphones",catLaptops:"💻 Laptops",catTV:"📺 Fernseher",catHome:"🏠 Haushaltsgeräte",
-featuredTitle:"Empfohlenes Produkt",productIntro:"Modernes 5G-Smartphone mit AMOLED-Display, 8 GB RAM und 5000-mAh-Akku.",
-screen:"Display:",ram:"RAM:",storage:"Speicher:",camera:"Kamera:",battery:"Akku:",protection:"Schutz:",
-offersTitle:"Händlerangebote",sellerCheck:"Angebot des Händlers",buy:"Kaufen",check:"Prüfen",
-notice:"Preise und Verfügbarkeit können sich ändern. Affiliate-Links sind noch nicht verbunden; nach der Anmeldung bei Partnerprogrammen können die Links durch Links mit deiner ID ersetzt werden.",
-footerText:"BestBuy Spain — Vergleich von Produkten und Händlerangeboten."
-}
+const products=[
+{id:"a56",cat:"phone",icon:"📱",title:"Samsung Galaxy A56 5G 8GB/128GB",price:"311,81 €*",search:"samsung galaxy a56 5g smartphone samsung móvil телефон смартфон",desc:{es:'5G, pantalla Super AMOLED de 6,7", 8 GB de RAM, 128 GB y batería de 5000 mAh.',ru:'5G, Super AMOLED 6,7", 8 ГБ ОЗУ, 128 ГБ и батарея 5000 мА·ч.',en:'5G, 6.7-inch Super AMOLED, 8 GB RAM, 128 GB storage and 5000 mAh battery.',zh:'5G、6.7英寸 Super AMOLED、8GB 内存、128GB 存储和5000mAh电池。',de:'5G, 6,7-Zoll Super AMOLED, 8 GB RAM, 128 GB Speicher und 5000-mAh-Akku.'},specs:["6.7\" AMOLED","8 GB RAM","128 GB","5000 mAh","5G"],offers:[["PcComponentes","311,81 €*","https://www.pccomponentes.com/samsung-galaxy-a56-5g-8gb-128gb-6-7-gris"],["Amazon.es","Comprobar","https://www.amazon.es/s?k=Samsung+Galaxy+A56+5G+8GB+128GB"],["MediaMarkt","Comprobar","https://www.mediamarkt.es/es/search.html?query=Samsung%20Galaxy%20A56"]]},
+{id:"iphone16",cat:"phone",icon:"📱",title:"Apple iPhone 16",search:"apple iphone 16 smartphone móvil телефон смартфон",desc:{es:"Pantalla OLED, chip A18, USB-C, 5G y sistema de cámara avanzado.",ru:"OLED-дисплей, чип A18, USB-C, 5G и продвинутая камера.",en:"OLED display, A18 chip, USB-C, 5G and advanced camera system.",zh:"OLED 屏幕、A18 芯片、USB-C、5G 和先进相机系统。",de:"OLED-Display, A18-Chip, USB-C, 5G und fortschrittliches Kamerasystem."},specs:["OLED","A18","USB-C","5G","iOS"],offers:[["Amazon.es","Comprobar","https://www.amazon.es/s?k=Apple+iPhone+16"],["MediaMarkt","Comprobar","https://www.mediamarkt.es/es/search.html?query=iPhone%2016"],["PcComponentes","Comprobar","https://www.pccomponentes.com/buscar/?query=iPhone%2016"]]},
+{id:"redmi14pro",cat:"phone",icon:"📱",title:"Xiaomi Redmi Note 14 Pro 5G",search:"xiaomi redmi note 14 pro 5g smartphone móvil телефон смартфон",desc:{es:"Smartphone 5G de gama media con pantalla AMOLED y cámara de alta resolución.",ru:"Среднебюджетный 5G-смартфон с AMOLED и камерой высокого разрешения.",en:"Mid-range 5G smartphone with an AMOLED display and high-resolution camera.",zh:"中端 5G 智能手机，配备 AMOLED 屏幕和高分辨率相机。",de:"5G-Mittelklasse-Smartphone mit AMOLED-Display und hochauflösender Kamera."},specs:["AMOLED","5G","USB-C","NFC*","Android"],offers:[["PcComponentes","Comprobar","https://www.pccomponentes.com/buscar/?query=Xiaomi%20Redmi%20Note%2014%20Pro%205G"],["Amazon.es","Comprobar","https://www.amazon.es/s?k=Xiaomi+Redmi+Note+14+Pro+5G"],["Carrefour","Comprobar","https://www.carrefour.es/?q=Xiaomi%20Redmi%20Note%2014%20Pro"]]},
+{id:"pixel9",cat:"phone",icon:"📱",title:"Google Pixel 9",search:"google pixel 9 smartphone móvil телефон смартфон",desc:{es:"Smartphone Google con pantalla OLED, cámara avanzada y funciones de IA.",ru:"Смартфон Google с OLED-дисплеем, продвинутой камерой и функциями ИИ.",en:"Google smartphone with OLED display, advanced camera and AI features.",zh:"Google 智能手机，配备 OLED 屏幕、先进相机和 AI 功能。",de:"Google-Smartphone mit OLED-Display, fortschrittlicher Kamera und KI-Funktionen."},specs:["OLED","Google Tensor","5G","USB-C","Android"],offers:[["Amazon.es","Comprobar","https://www.amazon.es/s?k=Google+Pixel+9"],["MediaMarkt","Comprobar","https://www.mediamarkt.es/es/search.html?query=Google%20Pixel%209"]]},
+{id:"macm4",cat:"computer",icon:"💻",title:"Apple MacBook Air M4",search:"apple macbook air m4 ordenador portátil laptop ноутбук компьютер",desc:{es:"Portátil ligero con chip Apple M4, pantalla Liquid Retina y batería de larga duración.",ru:"Лёгкий ноутбук с Apple M4, Liquid Retina и длительным временем работы.",en:"Lightweight laptop with Apple M4, Liquid Retina display and long battery life.",zh:"轻薄笔记本电脑，搭载 Apple M4 和 Liquid Retina 屏幕。",de:"Leichtes Notebook mit Apple M4, Liquid-Retina-Display und langer Akkulaufzeit."},specs:["Apple M4","Liquid Retina","USB-C","Wi-Fi","macOS"],offers:[["Amazon.es","Comprobar","https://www.amazon.es/s?k=MacBook+Air+M4"],["MediaMarkt","Comprobar","https://www.mediamarkt.es/es/search.html?query=MacBook%20Air%20M4"],["PcComponentes","Comprobar","https://www.pccomponentes.com/buscar/?query=MacBook%20Air%20M4"]]},
+{id:"lenovo",cat:"computer",icon:"💻",title:"Lenovo IdeaPad Slim 3",search:"lenovo ideapad slim 3 ordenador laptop portátil ноутбук",desc:{es:"Portátil práctico para trabajo, estudio, navegación y uso diario.",ru:"Практичный ноутбук для работы, учёбы, интернета и повседневных задач.",en:"Practical laptop for work, study, browsing and everyday use.",zh:"适合办公、学习、上网和日常使用的实用笔记本。",de:"Praktisches Notebook für Arbeit, Studium, Surfen und Alltag."},specs:["Full HD","SSD","Windows","USB-C","Wi-Fi"],offers:[["Amazon.es","Comprobar","https://www.amazon.es/s?k=Lenovo+IdeaPad+Slim+3"],["MediaMarkt","Comprobar","https://www.mediamarkt.es/es/search.html?query=Lenovo%20IdeaPad%20Slim%203"]]},
+{id:"ps5",cat:"gaming",icon:"🎮",title:"Sony PlayStation 5 Slim Digital Edition",price:"599,00 €*",search:"sony playstation 5 ps5 slim digital gaming консоль",desc:{es:"Consola PS5 Slim Digital Edition con SSD de 825 GB y soporte 4K.",ru:"PS5 Slim Digital Edition с SSD 825 ГБ и поддержкой 4K.",en:"PS5 Slim Digital Edition with 825 GB SSD and 4K support.",zh:"PS5 Slim 数字版，配备 825GB SSD，支持 4K。",de:"PS5 Slim Digital Edition mit 825-GB-SSD und 4K-Unterstützung."},specs:["825 GB SSD","4K","HDR","1 mando","Digital"],offers:[["MediaMarkt","599,00 €*","https://www.mediamarkt.es/es/search.html?query=PS5%20Slim%20Digital"],["Amazon.es","Comprobar","https://www.amazon.es/s?k=PS5+Slim+Digital"],["PcComponentes","Comprobar","https://www.pccomponentes.com/buscar/?query=PS5%20Slim"]]},
+{id:"xbox",cat:"gaming",icon:"🎮",title:"Xbox Series X",search:"xbox series x gaming consola videojuegos консоль",desc:{es:"Consola de alto rendimiento con SSD y juegos en resolución 4K.",ru:"Производительная консоль с SSD и играми в разрешении 4K.",en:"High-performance console with SSD storage and 4K gaming.",zh:"高性能游戏主机，配备 SSD，支持 4K 游戏。",de:"Leistungsstarke Konsole mit SSD und Gaming in 4K."},specs:["1 TB SSD","4K","HDR","HDMI 2.1","Xbox"],offers:[["Amazon.es","Comprobar","https://www.amazon.es/s?k=Xbox+Series+X"],["MediaMarkt","Comprobar","https://www.mediamarkt.es/es/search.html?query=Xbox%20Series%20X"]]},
+{id:"lgc4",cat:"tv",icon:"📺",title:"LG OLED C4",search:"lg oled c4 television tv телевизор",desc:{es:"Televisor OLED 4K con alto contraste, HDR, HDMI 2.1 y funciones gaming.",ru:"OLED-телевизор 4K с высоким контрастом, HDR, HDMI 2.1 и функциями для игр.",en:"4K OLED TV with high contrast, HDR, HDMI 2.1 and gaming features.",zh:"4K OLED 电视，支持 HDR、HDMI 2.1 和游戏功能。",de:"4K-OLED-TV mit hohem Kontrast, HDR, HDMI 2.1 und Gaming-Funktionen."},specs:["OLED","4K","HDR","HDMI 2.1","Smart TV"],offers:[["Amazon.es","Comprobar","https://www.amazon.es/s?k=LG+OLED+C4"],["MediaMarkt","Comprobar","https://www.mediamarkt.es/es/search.html?query=LG%20OLED%20C4"],["Carrefour","Comprobar","https://www.carrefour.es/?q=LG%20OLED%20C4"]]},
+{id:"samsungq80",cat:"tv",icon:"📺",title:"Samsung QLED Q80D",search:"samsung qled q80d television tv телевизор",desc:{es:"Televisor QLED 4K con HDR, Smart TV y funciones orientadas a videojuegos.",ru:"Телевизор QLED 4K с HDR, Smart TV и игровыми функциями.",en:"4K QLED TV with HDR, Smart TV and gaming-oriented features.",zh:"4K QLED 电视，支持 HDR、Smart TV 和游戏功能。",de:"4K-QLED-TV mit HDR, Smart TV und Gaming-Funktionen."},specs:["QLED","4K","HDR","HDMI","Smart TV"],offers:[["Amazon.es","Comprobar","https://www.amazon.es/s?k=Samsung+QLED+Q80D"],["MediaMarkt","Comprobar","https://www.mediamarkt.es/es/search.html?query=Samsung%20QLED%20Q80D"]]},
+{id:"dyson",cat:"home",icon:"🧹",title:"Dyson V15 Detect",search:"dyson v15 detect aspiradora vacuum пылесос",desc:{es:"Aspiradora inalámbrica con detección de partículas y pantalla LCD.",ru:"Беспроводной пылесос с обнаружением частиц и LCD-экраном.",en:"Cordless vacuum with particle detection and LCD screen.",zh:"无线吸尘器，配备颗粒检测和 LCD 屏幕。",de:"Kabelloser Staubsauger mit Partikelerkennung und LCD-Display."},specs:["Sin cable","LCD","Filtro","Detect","Dyson"],offers:[["Amazon.es","Comprobar","https://www.amazon.es/s?k=Dyson+V15+Detect"],["MediaMarkt","Comprobar","https://www.mediamarkt.es/es/search.html?query=Dyson%20V15%20Detect"]]},
+{id:"airpods",cat:"home",icon:"🎧",title:"Apple AirPods Pro 2",search:"airpods pro 2 apple auriculares headphones наушники",desc:{es:"Auriculares inalámbricos con cancelación activa de ruido y estuche USB-C.",ru:"Беспроводные наушники с активным шумоподавлением и кейсом USB-C.",en:"Wireless earbuds with active noise cancellation and USB-C charging case.",zh:"无线耳机，支持主动降噪和 USB-C 充电盒。",de:"Kabellose Kopfhörer mit aktiver Geräuschunterdrückung und USB-C-Ladecase."},specs:["ANC","USB-C","Bluetooth","Spatial Audio","Apple"],offers:[["Amazon.es","Comprobar","https://www.amazon.es/s?k=AirPods+Pro+2+USB-C"],["PcComponentes","Comprobar","https://www.pccomponentes.com/buscar/?query=AirPods%20Pro%202"],["MediaMarkt","Comprobar","https://www.mediamarkt.es/es/search.html?query=AirPods%20Pro%202"]]}
+];
+
+const T={
+es:{navHome:"Inicio",navCategories:"Categorías",navProducts:"Productos",heroTitle:"Compara. Elige. Compra.",heroSubtitle:"Encuentra productos y compara ofertas de diferentes tiendas.",searchPlaceholder:"Buscar productos, por ejemplo Samsung A56...",searchHint:"Escribe el nombre del producto o elige una categoría.",all:"Todos",catPhones:"📱 Smartphones",catComputers:"💻 Ordenadores",catTV:"📺 Televisores",catGaming:"🎮 Gaming",catHome:"🏠 Hogar",categoriesTitle:"Categorías",productsTitle:"Productos",check:"Comprobar",details:"Ver detalles",back:"Volver a productos",offers:"Ofertas de tiendas",specs:"Características",noResultsTitle:"No se encontraron productos",noResultsText:"Prueba otro nombre o selecciona otra categoría.",notice:"*Los precios son orientativos y pueden cambiar. Los enlaces todavía no son de afiliado. Cuando conectemos los programas de afiliación, sustituiremos los enlaces por enlaces con tu ID.",footerText:"BestBuy Spain — comparación de productos y ofertas de tiendas."},
+ru:{navHome:"Главная",navCategories:"Категории",navProducts:"Товары",heroTitle:"Сравнивай. Выбирай. Покупай.",heroSubtitle:"Находи товары и сравнивай предложения разных магазинов.",searchPlaceholder:"Поиск товаров, например Samsung A56...",searchHint:"Введи название товара или выбери категорию.",all:"Все",catPhones:"📱 Смартфоны",catComputers:"💻 Компьютеры",catTV:"📺 Телевизоры",catGaming:"🎮 Gaming",catHome:"🏠 Дом",categoriesTitle:"Категории",productsTitle:"Товары",check:"Проверить",details:"Подробнее",back:"Назад к товарам",offers:"Предложения магазинов",specs:"Характеристики",noResultsTitle:"Ничего не найдено",noResultsText:"Попробуй другое название или категорию.",notice:"*Цены ориентировочные и могут меняться. Ссылки пока не являются партнёрскими. После подключения партнёрских программ заменим их ссылками с твоим ID.",footerText:"BestBuy Spain — сравнение товаров и предложений магазинов."},
+en:{navHome:"Home",navCategories:"Categories",navProducts:"Products",heroTitle:"Compare. Choose. Buy.",heroSubtitle:"Find products and compare offers from different stores.",searchPlaceholder:"Search products, for example Samsung A56...",searchHint:"Type a product name or choose a category.",all:"All",catPhones:"📱 Smartphones",catComputers:"💻 Computers",catTV:"📺 TVs",catGaming:"🎮 Gaming",catHome:"🏠 Home",categoriesTitle:"Categories",productsTitle:"Products",check:"Check",details:"View details",back:"Back to products",offers:"Store offers",specs:"Specifications",noResultsTitle:"No products found",noResultsText:"Try another product name or category.",notice:"*Prices are indicative and may change. Links are not affiliate links yet. Once affiliate programs are connected, they can be replaced with links containing your ID.",footerText:"BestBuy Spain — product and store offer comparison."},
+zh:{navHome:"首页",navCategories:"分类",navProducts:"商品",heroTitle:"比较、选择、购买。",heroSubtitle:"查找商品并比较不同商店的优惠。",searchPlaceholder:"搜索商品，例如 Samsung A56...",searchHint:"输入商品名称或选择分类。",all:"全部",catPhones:"📱 智能手机",catComputers:"💻 电脑",catTV:"📺 电视",catGaming:"🎮 游戏",catHome:"🏠 家居",categoriesTitle:"商品分类",productsTitle:"商品",check:"查看",details:"查看详情",back:"返回商品",offers:"商店报价",specs:"规格",noResultsTitle:"没有找到商品",noResultsText:"请尝试其他商品名称或分类。",notice:"*价格仅供参考，可能变化。目前链接还不是联盟链接。连接联盟计划后，可以替换为带有你的推广 ID 的链接。",footerText:"BestBuy Spain — 商品和商店优惠比较。"},
+de:{navHome:"Startseite",navCategories:"Kategorien",navProducts:"Produkte",heroTitle:"Vergleichen. Auswählen. Kaufen.",heroSubtitle:"Finde Produkte und vergleiche Angebote verschiedener Händler.",searchPlaceholder:"Produkte suchen, zum Beispiel Samsung A56...",searchHint:"Produktnamen eingeben oder Kategorie auswählen.",all:"Alle",catPhones:"📱 Smartphones",catComputers:"💻 Computer",catTV:"📺 Fernseher",catGaming:"🎮 Gaming",catHome:"🏠 Haushalt",categoriesTitle:"Kategorien",productsTitle:"Produkte",check:"Prüfen",details:"Details ansehen",back:"Zurück zu Produkten",offers:"Händlerangebote",specs:"Technische Daten",noResultsTitle:"Keine Produkte gefunden",noResultsText:"Versuche einen anderen Produktnamen oder eine andere Kategorie.",notice:"*Preise sind Richtwerte und können sich ändern. Die Links sind noch keine Affiliate-Links. Nach der Verbindung der Partnerprogramme können sie durch Links mit deiner ID ersetzt werden.",footerText:"BestBuy Spain — Vergleich von Produkten und Händlerangeboten."}
 };
+let lang=localStorage.getItem("bestbuy-language")||"es", category="all";
 
-function setLanguage(lang){
-const t=translations[lang]||translations.es;
-document.documentElement.lang=lang;
-document.querySelectorAll("[data-i18n]").forEach(el=>{
-const key=el.getAttribute("data-i18n");
-if(t[key]!==undefined) el.textContent=t[key];
-});
-document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
-const key=el.getAttribute("data-i18n-placeholder");
-if(t[key]!==undefined) el.placeholder=t[key];
-});
-document.querySelectorAll(".lang").forEach(btn=>{
-btn.classList.toggle("active",btn.dataset.lang===lang);
-});
-localStorage.setItem("bestbuy-language",lang);
+function tr(k){return (T[lang]&&T[lang][k])||T.es[k]||k}
+function setLanguage(l){lang=l;localStorage.setItem("bestbuy-language",l);document.documentElement.lang=l;document.querySelectorAll("[data-i18n]").forEach(e=>e.textContent=tr(e.dataset.i18n));document.querySelectorAll("[data-i18n-placeholder]").forEach(e=>e.placeholder=tr(e.dataset.i18nPlaceholder));document.querySelectorAll(".lang").forEach(b=>b.classList.toggle("active",b.dataset.lang===l));renderProducts(); if(location.hash.startsWith("#product-")) renderDetail(location.hash.replace("#product-",""))}
+function renderProducts(){
+const q=document.getElementById("search").value.toLowerCase().trim(), grid=document.getElementById("productGrid");let n=0;
+grid.innerHTML=products.map(p=>{let show=(category==="all"||p.cat===category)&&(!q||p.search.toLowerCase().includes(q)||p.title.toLowerCase().includes(q));if(show)n++;
+return `<article class="card product ${show?"":"hidden"}"><div class="card-media">${p.icon}</div><span class="badge">${catName(p.cat)}</span><h3>${p.title}</h3><p>${p.desc[lang]||p.desc.es}</p><div class="spec-mini">${p.specs.slice(0,4).join(" • ")}</div><div class="card-bottom"><div class="price">${p.price||tr("check")}</div><a class="buy" href="${p.offers[0][2]}" target="_blank" rel="nofollow sponsored noopener" onclick="track('${p.id}')">${p.offers[0][0]}</a></div><a class="details-btn" href="#product-${p.id}" onclick="renderDetail('${p.id}')" data-i18n="details">${tr("details")}</a></article>`}).join("");
+document.getElementById("noResults").style.display=n?"none":"block";document.getElementById("resultCount").textContent=n+" "+(n===1?(lang==="ru"?"товар":lang==="de"?"Produkt":lang==="zh"?"个商品":"product"):(lang==="ru"?"товаров":lang==="de"?"Produkte":lang==="zh"?"个商品":"products"));document.getElementById("clearSearch").style.display=q?"block":"none";
 }
-
-document.querySelectorAll(".lang").forEach(btn=>{
-btn.addEventListener("click",()=>setLanguage(btn.dataset.lang));
-});
-
-document.getElementById("search").addEventListener("input",function(){
-const q=this.value.toLowerCase().trim();
-const product=document.getElementById("a56");
-product.style.display=(!q||q.includes("a56")||q.includes("samsung")||q.includes("galaxy"))?"":"none";
-});
-
-setLanguage(localStorage.getItem("bestbuy-language")||"es");
+function catName(c){return {phone:tr("catPhones"),computer:tr("catComputers"),tv:tr("catTV"),gaming:tr("catGaming"),home:tr("catHome")}[c]}
+function renderDetail(id){const p=products.find(x=>x.id===id);if(!p)return;document.getElementById("home").style.display="none";document.getElementById("detail").classList.add("show");document.getElementById("detailContent").innerHTML=`<div class="detail-card"><div class="detail-top"><div class="detail-icon">${p.icon}</div><div><span class="badge">${catName(p.cat)}</span><h1>${p.title}</h1><p class="detail-desc">${p.desc[lang]||p.desc.es}</p></div></div><h2>${tr("specs")}</h2><div class="detail-specs">${p.specs.map((s,i)=>`<div class="spec"><b>${lang==="ru"?"Параметр":lang==="es"?"Característica":lang==="de"?"Merkmal":lang==="zh"?"参数":"Feature"} ${i+1}</b>${s}</div>`).join("")}</div><div class="offers"><h2>${tr("offers")}</h2>${p.offers.map(o=>`<div class="offer"><div><div class="offer-store">${o[0]}</div><div class="offer-price">${o[1]}</div></div><a class="buy" href="${o[2]}" target="_blank" rel="nofollow sponsored noopener" onclick="track('${p.id}')">${tr("check")}</a></div>`).join("")}</div></div>`;window.scrollTo(0,0)}
+function showHome(){location.hash="";document.getElementById("detail").classList.remove("show");document.getElementById("home").style.display="block";renderProducts();window.scrollTo(0,0)}
+function track(id){const k="bestbuy_click_"+id;localStorage.setItem(k,String(Number(localStorage.getItem(k)||0)+1))}
+document.querySelectorAll(".lang").forEach(b=>b.onclick=()=>setLanguage(b.dataset.lang));
+document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{category=b.dataset.category;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));renderProducts()});
+document.getElementById("search").oninput=renderProducts;
+document.getElementById("clearSearch").onclick=()=>{document.getElementById("search").value="";renderProducts();document.getElementById("search").focus()};
+window.onhashchange=()=>{if(location.hash.startsWith("#product-"))renderDetail(location.hash.replace("#product-",""));else showHome()};
+setLanguage(lang); if(location.hash.startsWith("#product-"))renderDetail(location.hash.replace("#product-",""));
 </script>
 </body>
 </html>
